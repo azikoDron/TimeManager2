@@ -1,0 +1,43 @@
+#:kivy 1.11.1
+#:import Builder kivy.lang
+
+
+<Controller>:
+    TopNavBar:
+
+
+
+
+
+
+
+
+
+<TopNavBar>:
+    BoxLayout:
+        orientation: 'horizontal'
+        size_hint: 1, 0.07
+        pos_hint: {'top': 1}
+        canvas:
+            Color:
+                rgba: (232, 0, 0, 1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Button:
+            size_hint: 0.2, 1
+            text: '|||'                                 #+ root.info
+            #on_press: root.do_action()
+            background_color: 232, 0, 0, 1
+        Label:
+            id: my_custom_label
+            #text: "Hello"
+        Label:
+            size_hint: 0.3, 1
+            id: my_custom_label
+            #text: "Login"
+        Button:
+            size_hint: 0.2, 1
+            text: 'Login'                                 #+ root.info
+            #on_press: root.do_action()
+            background_color: 232, 0, 0, 1
