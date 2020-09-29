@@ -1,13 +1,34 @@
 #:kivy 1.11.1
 #:import Builder kivy.lang
-
+#:import ScrollView kivy.uix.scrollview
 
 <Controller>:
     TopNavBar:
 
 
 
+<TaskMenu>:
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
 
+    Label:
+        size_hint_y: None
+        height: self.texture_size[1]
+        text_size: 25 #self.width
+        padding: 10, 10
+        text: 'really some amazing text\n' * 100
+
+
+<SideBar>:
+    canvas.before:
+        Color:
+            rgba: (110, 133, 245, 1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    size_hint: (.5, .93)
+    pos_hint: {'left': 1}
 
 
 
@@ -29,6 +50,7 @@
             text: '|||'                                 #+ root.info
             #on_press: root.do_action()
             background_color: 232, 0, 0, 1
+            on_press: root.menu_action()
         Label:
             id: my_custom_label
             #text: "Hello"
