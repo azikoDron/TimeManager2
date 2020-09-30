@@ -20,24 +20,37 @@ class SideBar(GridLayout):
 
 
 class TopNavBar(FloatLayout):
+    '''
+    Should consists couple of buttons 1:SideBar 2:Login
+    WHILE NO ADDITTIONALS
+    '''
     def menu_action(self):
+        '''
+        Shows Sidebar:class
+        When button on TopNavBar is pressed: it calls from "controller.kv"
+        '''
         self.add_widget(SideBar())
 
     def hide_menu_action(self):             # FIX ME ! NOT WORKING
+        '''shuld close sideBar:
+        '''
         self.remove_widget(SideBar())
 
 
-class TaskMenu(GridLayout):
+class TaskMenu(BoxLayout):   # LEVEL THAT MUST BE SET PROPER: WORKING ON THIS TOPIC 30.10.2020
+    '''
+
+    '''
+    # def scrolling_ef(self):
     # layout = GridLayout(cols=1, spacing=10, size_hint_y=None)
-    # # Make sure the height is such that there is something to scroll.
+    # #     # Make sure the height is such that there is something to scroll.
     # layout.bind(minimum_height=layout.setter('height'))
-    # for i in range(15):
+    # for i in range(15):3
     #     btn = Button(text=str(i), size_hint_y=None, height=40)
     #     layout.add_widget(btn)
-    # root = ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
-    # root.add_widget(layout)
-    #
-    # runTouchApp(root)
+    # #
+    # ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
+    # # #     return root
     pass
 
 

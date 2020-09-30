@@ -5,25 +5,26 @@
 <Controller>:
     TopNavBar:
 
+    #TaskMenu:
 
 
 <TaskMenu>:
     ScrollView:
         do_scroll_x: False
         do_scroll_y: True
-
     Label:
         size_hint_y: None
         height: self.texture_size[1]
-        text_size: 25 #self.width
+        #text_size: self.width
         padding: 10, 10
         text: 'really some amazing text\n' * 100
+
 
 
 <SideBar>:
     canvas.before:
         Color:
-            rgba: (110, 133, 245, 1)
+            rgba: 232, 0, 0, 1
         Rectangle:
             size: self.size
             pos: self.pos
