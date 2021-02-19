@@ -48,12 +48,12 @@ class TaskMenu(BoxLayout):   # LEVEL THAT MUST BE SET PROPER: WORKING ON THIS TO
         layout = GridLayout(cols=1, spacing=10, size_hint_y=None)
     #     # Make sure the height is such that there is something to scroll.
         layout.bind(minimum_height=layout.setter('height'))
-    for i in range(15):3
-        btn = Button(text=str(i), size_hint_y=None, height=40)
-        layout.add_widget(btn)
+        for i in range(15):
+            btn = Button(text=str(i), size_hint_y=None, height=40)
+            layout.add_widget(btn)
     #
         ScrollView(size_hint=(1, None), size=(Window.width, Window.height))
-        return root
+        return
         #pass
 
 
