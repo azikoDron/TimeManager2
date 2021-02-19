@@ -1,39 +1,27 @@
 #:kivy 1.11.1
-#:import Builder kivy.lang
-#:import ScrollView kivy.uix.scrollview
+
+
 
 <Controller>:
+    orientation: 'vertical'
+    TaskMenu:
     TopNavBar:
 
-    #TaskMenu:
+
 
 
 <TaskMenu>:
+    pos_hint: {'top': 0.93}
     ScrollView:
         do_scroll_x: False
         do_scroll_y: True
-    Label:
-        size_hint_y: None
-        height: self.texture_size[1]
-        #text_size: self.width
-        padding: 10, 10
-        text: 'really some amazing text\n' * 100
 
-
-
-<SideBar>:
-    canvas.before:
-        Color:
-            rgba: 232, 0, 0, 1
-        Rectangle:
-            size: self.size
-            pos: self.pos
-    size_hint: (.5, .93)
-    pos_hint: {'left': 1}
-
-
-
-
+        Label:
+            size_hint_y: None
+            height: self.texture_size[1]
+            #text_size: self.width
+            padding: 10, 10
+            text: 'really some amazing text444444444444444444444444444444\n' * 100
 
 <TopNavBar>:
     BoxLayout:
@@ -64,3 +52,14 @@
             text: 'Login'                                 #+ root.info
             #on_press: root.do_action()
             background_color: 232, 0, 0, 1
+
+
+<SideBar>:
+    canvas.before:
+        Color:
+            rgba: 232, 0, 0, 1
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    size_hint: (.5, .93)
+    pos_hint: {'left': 1}
